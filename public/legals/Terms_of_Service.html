@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | CarePro VA</title>
+    <link rel="stylesheet" href="../../style.css">
+    <div id="mobileMenu" class="mobile-menu">
+        <a href="#about" onclick="closeMobileMenu()">About</a>
+        <a href="#services" onclick="closeMobileMenu()">Services</a>
+        <a href="#why-us" onclick="closeMobileMenu()">Why Us</a>
+        <a href="#how-it-works" onclick="closeMobileMenu()">How It Works</a>
+        <a href="#compliance" onclick="closeMobileMenu()">Compliance</a>
+
+        <button class="btn-primary" onclick="openModal(); closeMobileMenu();">
+            Book a Consultation
+        </button>
+    </div>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+            background-color: #ffffff;
+            padding: 12px 0;
+        }
+
+        body {
+            padding-top: 80px;
+            /* match your header height */
+        }
+
+        /* NAV (keep this so your header doesn’t break) */
+        header .nav a,
+        header.scrolled .nav a {
+            color: #6B7280 !important;
+        }
+
+        header.scrolled {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        header .nav a:hover {
+            color: #2EC4B6 !important;
+        }
+
+        /* LAYOUT (keep this from your original) */
+        .about-content {
+            display: flex;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        /* REPLACED INFO-BOX STYLE → CARD STYLE */
+        .info-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e5eaf0;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .info-box:hover {
+            border-color: rgba(46, 196, 182, 0.3);
+            background-color: #f8fcfc;
+        }
+
+        .info-box-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background-color: #eff9f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--primary-teal);
+            font-size: 20px;
+        }
+
+        .info-box-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .info-box h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .info-box p {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+
+            .nav,
+            .nav-right {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                color: #1F3A5F;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header id="header">
+        <div class="header-inner">
+
+            <!-- LEFT: LOGO -->
+            <div class="logo">
+                <a href="https://careprova.com/">
+                    <img id="logoImg" src="../for_White_BG.png" alt="CarePro VA">
+                </a>
+            </div>
+
+            <!-- CENTER: NAV -->
+            <nav class="nav">
+                <a href="https://careprova.com/#about">About</a>
+                <a href="https://careprova.com/#services">Services</a>
+                <a href="https://careprova.com/#why-us">Why Us</a>
+                <a href="https://careprova.com/#how-it-works">How It Works</a>
+                <a href="https://careprova.com/#compliance">Compliance</a>
+            </nav>
+
+            <!-- RIGHT: CTA -->
+            <div class="nav-right">
+                <button class="btn-nav" onclick="openModal()">Book a Consultation</button>
+            </div>
+
+            <!-- MOBILE -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><strong>Legal</strong></div>
+                <h2>Terms of Service</h2>
+                <p class="section-desc">Please review the terms and conditions that govern your access to and use of
+                    <br>CarePro VA services.
+                </p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <!-- Terms / agreement icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 6h16M4 12h16M4 18h10" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Acceptance of Terms</h3>
+                            <p>By accessing or using CarePro VA services, you agree to be bound by these Terms of
+                                Service and all applicable laws and regulations.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <!-- Services icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Nature of Services</h3>
+                            <p>CarePro VA provides administrative, operational, and virtual assistant support services.
+                                We do not provide medical, legal, or clinical advice.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <!-- Responsibility icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="7" r="4" />
+                                <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Client Responsibilities</h3>
+                            <p>Clients are solely responsible for ensuring compliance with healthcare regulations,
+                                maintaining proper supervision, and making all clinical decisions.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <!-- Shield / HIPAA -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>HIPAA & Compliance</h3>
+                            <p>When applicable, services involving PHI are governed by a separate Business Associate
+                                Agreement (BAA). Clients must ensure proper systems and permissions are in place.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <!-- Payment icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="5" width="20" height="14" rx="2" />
+                                <path d="M2 10h20" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Payment & Engagement</h3>
+                            <p>All fees, billing terms, and service scope will be defined in a separate agreement or
+                                proposal. Failure to meet payment terms may result in suspension of services.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <!-- Lock icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Confidentiality</h3>
+                            <p>Both parties agree to maintain confidentiality of all proprietary, business, and
+                                sensitive information exchanged during the engagement.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <!-- Alert / liability -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M10.29 3.86l-7.39 12.8A1 1 0 0 0 3.76 18h16.48a1 1 0 0 0 .86-1.34l-7.39-12.8a1 1 0 0 0-1.72 0z" />
+                                <line x1="12" y1="9" x2="12" y2="13" />
+                                <circle cx="12" cy="17" r="1" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Limitation of Liability</h3>
+                            <p>To the maximum extent permitted by California law, CarePro VA shall not be liable for
+                                indirect, incidental, or consequential damages, including loss of revenue or data.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <!-- Shield check -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4z" />
+                                <path d="M9 12l2 2 4-4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Indemnification</h3>
+                            <p>You agree to indemnify and hold harmless CarePro VA from any claims, damages, or
+                                liabilities arising from misuse of services or failure to comply with applicable laws.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <!-- Stop / termination -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="9" y1="9" x2="15" y2="15" />
+                                <line x1="15" y1="9" x2="9" y2="15" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Termination</h3>
+                            <p>We reserve the right to suspend or terminate services at any time for violation of these
+                                terms or misuse of services.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <!-- Globe / law -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Governing Law</h3>
+                            <p>These Terms shall be governed by the laws of the State of California, without regard to
+                                conflict of law principles.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="https://careprova.com/">
+                            <img id="logoImg" src="../for_Black_BG.png" alt="CarePro VA">
+                        </a>
+                    </div>
+                    <p class="footer-desc">
+                        CarePro VA provides reliable medical virtual admin support so your team can
+                        stay focused on what matters most — your patients.
+                    </p>
+
+                    <div class="social-links">
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/careprova" target="_blank" rel="noopener noreferrer"
+                            class="social-link">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect width="20" height="20" x="2" y="2" rx="5"></rect>
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"></circle>
+                            </svg>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/careprova" target="_blank" rel="noopener noreferrer"
+                            class="social-link">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/carepro-va-526424403/" target="_blank"
+                            rel="noopener noreferrer" class="social-link">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+
+                        <!-- TikTok (fixed to match style) -->
+                        <a href="https://www.tiktok.com/@careprova" target="_blank" rel="noopener noreferrer"
+                            class="social-link">
+                            <svg viewBox="0 0 448 512" width="16" height="16" fill="currentColor">
+                                <path
+                                    d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="https://careprova.com/#services">Administrative Support</a>
+                        <a href="https://careprova.com/#services">Billing & Revenue Cycle</a>
+                        <a href="https://careprova.com/#services">Clinical Admin Support</a>
+                        <a href="https://careprova.com/#services">Patient Coordination</a>
+                        <a href="https://careprova.com/#services">Operations Support</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <a href="https://careprova.com/#about">About Us</a>
+                        <a href="https://careprova.com/#services">Services</a>
+                        <a href="https://careprova.com/#why-us">Why Choose Us</a>
+                        <a href="https://careprova.com/#how-it-works">How It Works</a>
+                        <a href="https://careprova.com/#compliance">Compliance</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+
+                    <div class="footer-links">
+
+                        <!-- EMAIL -->
+                        <div class="footer-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-mail">
+                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+
+                            <a href="mailto:info@careprova.com">info@careprova.com</a>
+                        </div>
+
+                        <!-- ADDRESS -->
+                        <div class="footer-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-map-pin">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+
+                            <p class="footer-address">
+                                3400 Cottage Way Ste G2 #34177, Sacramento CA, 95825
+                            </p>
+                        </div>
+                    </div>
+
+                    <h4 class="workforce-title">Workforce Portal</h4>
+
+                    <div class="footer-links">
+
+                        <!-- FLOWLINE -->
+                        <div class="footer-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-fingerprint text-[#2EC4B6]">
+                                <path d="M2 12C2 6.5 6.5 2 12 2a10 10 0 0 1 8 4"></path>
+                                <path d="M5 19.5C5.5 18 6 15 6 12c0-.7.12-1.37.34-2"></path>
+                                <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path>
+                                <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path>
+                                <path d="M8.65 22c.21-.66.45-1.32.57-2"></path>
+                                <path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path>
+                                <path d="M2 16h.01"></path>
+                                <path d="M21.8 16c.2-2 .131-5.354 0-6"></path>
+                                <path d="M9 6.8a6 6 0 0 1 9 5.2c0 .47 0 1.17-.02 2"></path>
+                            </svg>
+
+                            <a id="flowline-link" href="#" target="_blank" rel="noopener noreferrer">FlowLine</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 CarePro VA. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/public/legals/Privacy_Policy.html">Privacy Policy</a>
+                    <a href="/public/legals/Terms_of_Service.html">Terms of Service</a>
+                    <a href="/public/legals/HIPAA_Notice.html">HIPAA Notice</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>Get in Touch</h2>
+                <button class="modal-close" onclick="closeModal()">✕</button>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input"
+                            placeholder="Consultation Request" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="body" class="form-label">Message</label>
+                        <textarea id="body" name="body" class="form-textarea"
+                            placeholder="Tell us about your practice and administrative challenges..."
+                            required></textarea>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="button" class="btn-cancel" onclick="closeModal()">Cancel</button>
+                        <button type="submit" class="btn-submit" id="submitBtn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script>
+        fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRV1ilusCg_uZU8cNkuwH0hCGX62NxaH0JDFU9Lbr1uK5jzWq6L1MsWLPa9Oo4QteIwPNbxY2mJl5tS/pub?gid=0&single=true&output=csv")
+            .then(res => res.text())
+            .then(csv => {
+                const rows = csv.split("\n");
+                const a2 = rows[1]?.split(",")[0]; // A2 cell
+                const cleanUrl = a2?.replace(/"/g, "").trim();
+
+                if (cleanUrl) {
+                    document.getElementById("flowline-link").href = cleanUrl;
+                }
+            })
+            .catch(err => console.error("Error fetching sheet:", err));
+    </script>
+</body>
+
+</html>
