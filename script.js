@@ -1,6 +1,6 @@
 // Scroll handler for header
 if (window.location.pathname === '/' || window.location.pathname.includes('index.html')) {
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     const header = document.getElementById('header');
     const logo = document.getElementById('logoImg');
 
@@ -42,14 +42,14 @@ function closeModal() {
 }
 
 // Close modal when clicking overlay
-document.getElementById('contactModal').addEventListener('click', function(e) {
+document.getElementById('contactModal').addEventListener('click', function (e) {
   if (e.target === this) {
     closeModal();
   }
 });
 
 // Close modal with Escape key
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     closeModal();
   }
@@ -75,23 +75,23 @@ function handleFormSubmit(event) {
     "template_svwpp8b",
     templateParams
   )
-  .then(() => {
-    alert("Message sent successfully!");
-    document.getElementById('contactForm').reset();
-    closeModal();
-  })
-  .catch((error) => {
-    alert("Failed to send message.");
-    console.error(error);
-  })
-  .finally(() => {
-    submitBtn.disabled = false;
-    submitBtn.textContent = 'Send Message';
-  });
+    .then(() => {
+      alert("Message sent successfully!");
+      document.getElementById('contactForm').reset();
+      closeModal();
+    })
+    .catch((error) => {
+      alert("Failed to send message.");
+      console.error(error);
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
+    });
 }
 
 // Add staggered animation delays to service cards
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const serviceCards = document.querySelectorAll('.service-card');
   serviceCards.forEach((card, index) => {
     card.style.animationDelay = `${index * 0.1}s`;
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.querySelectorAll('.nav a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
 
     // Only handle same-page anchors (start with #)
@@ -122,3 +122,35 @@ document.querySelectorAll('.nav a').forEach(anchor => {
   });
 });
 
+<<<<<<< HEAD
+=======
+// Video Popup
+const video = document.getElementById("promoVideo");
+const modal = document.getElementById("openVideo");
+
+video.load();
+
+function openVideo() {
+  modal.classList.add("active");
+
+  video.currentTime = 0;
+
+  setTimeout(() => {
+    video.play();
+  }, 3000);
+}
+
+function closeVideo() {
+  modal.classList.remove("active");
+
+  video.pause();
+  video.currentTime = 0;
+}
+
+// Close when clicking overlay
+document.getElementById('openVideo').addEventListener('click', function (e) {
+  if (e.target === this) {
+    closeVideo();
+  }
+});
+>>>>>>> 403fef8 (Update)

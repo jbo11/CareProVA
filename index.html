@@ -83,7 +83,7 @@
 
                 <div class="hero-buttons">
                     <button class="btn-primary" onclick="openModal()">Book a Consultation</button>
-                    <a href="#about" class="btn-secondary">Learn More</a>
+                    <button class="btn-secondary" onclick="openVideo()">Learn More</button>
                 </div>
 
                 <div class="hero-stats">
@@ -935,6 +935,9 @@
         </div>
     </section>
 
+    <!-- Instagram Feed -->
+
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1127,6 +1130,16 @@
                 </form>
             </div>
         </div>
+    </div>
+
+    <!-- Video Popup -->
+    <div class="video-modal-body" id="openVideo">
+        <button class="close-video" onclick="closeVideo()">
+            X
+        </button>
+        <video id="promoVideo" autoplay playsinline preload="auto">
+            <source src="https://file.garden/ae-SQnRY3UKpjLFX/CareProVA/CPVAvid1.mp4" type="video/mp4">
+        </video>
     </div>
 
     <script src="script.js"></script>
