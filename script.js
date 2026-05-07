@@ -123,31 +123,49 @@ document.querySelectorAll('.nav a').forEach(anchor => {
 });
 
 // Video Popup
-const video = document.getElementById("promoVideo");
-const modal = document.getElementById("openVideo");
+document.addEventListener('DOMContentLoaded', () => {
 
-video.load();
+  const video = document.getElementById("promoVideo");
+  const modal = document.getElementById("openVideo");
 
-function openVideo() {
-  modal.classList.add("active");
+  if (!video || !modal) return;
 
-  video.currentTime = 0;
+  function openVideo() {
+    modal.classList.add("active");
 
-  setTimeout(() => {
-    video.play();
-  }, 3000);
-}
+    video.pause();
+    video.currentTime = 0;
 
-function closeVideo() {
-  modal.classList.remove("active");
+    // Delay before playing
+    setTimeout(() => {
+      video.muted = false;
 
-  video.pause();
-  video.currentTime = 0;
-}
+      const playPromise = video.play();
 
-// Close when clicking overlay
-document.getElementById('openVideo').addEventListener('click', function (e) {
-  if (e.target === this) {
-    closeVideo();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.log("Autoplay blocked:", err);
+        });
+      }
+    }, 2000);
   }
+
+  function closeVideo() {
+    modal.classList.remove("active");
+
+    video.pause();
+    video.currentTime = 0;
+  }
+
+  // Make global
+  window.openVideo = openVideo;
+  window.closeVideo = closeVideo;
+
+  // Close overlay
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      closeVideo();
+    }
+  });
+
 });
