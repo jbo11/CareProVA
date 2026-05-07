@@ -122,8 +122,6 @@ document.querySelectorAll('.nav a').forEach(anchor => {
   });
 });
 
-<<<<<<< HEAD
-=======
 // Video Popup
 const video = document.getElementById("promoVideo");
 const modal = document.getElementById("openVideo");
@@ -153,4 +151,3 @@ document.getElementById('openVideo').addEventListener('click', function (e) {
     closeVideo();
   }
 });
->>>>>>> 403fef8 (Update)
