@@ -122,11 +122,3 @@ document.querySelectorAll('.nav a').forEach(anchor => {
   });
 });
 
-// NEW XXXXXXXXXXXX
-
-// Modal functions
-function openModalVideo() {
-  const modal = document.getElementById('contactModalVideo');
-  modal.classList.add('active');
-  document.body.classList.add('hidden-overflow');
-}
